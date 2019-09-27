@@ -3,7 +3,10 @@ import { Card } from "@material-ui/core";
 class CardComponent extends Component {
   render() {
     var { data } = this.props;
-let color=data.color;
+
+    let color = data.color;
+    let textAlign=data.textAlign;
+    console.log(this.props.data1,"cardwadwd");
     debugger;
     const children = React.Children.map(this.props.children, child => {
       return <div>{child}</div>;
@@ -11,10 +14,12 @@ let color=data.color;
 
     debugger;
     return (
-      <div className="card" >
-        <div className="cardsinner" style={{backgroundColor:color}}>
-          <label>{data.label}</label>
-          <Card style={{color:color}}>{children}</Card>
+      <div >
+        <div  style={{ color: "black" ,textAlign:textAlign}}>
+          <Card  style={{width:"80%" , margin:"auto",color:color}} >
+            <label style={{textAlign:textAlign}}>{data.label}</label>
+            {children}
+          </Card>
         </div>
       </div>
     );

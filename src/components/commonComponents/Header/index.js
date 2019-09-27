@@ -5,10 +5,10 @@ const Header = props => {
   debugger;
 
   return (
-    <div>
-      <Typography variant="h6" color="inherit">
-        {data.label}
-      </Typography>
+    <div style={{textAlign:data.textAlign}}>
+
+        <label>{data.label}</label>
+
     </div>
   );
 };

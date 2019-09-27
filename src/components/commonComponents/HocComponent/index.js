@@ -9,7 +9,8 @@ const hoc = () => Component => {
             type: "Card",
             props: {
               label: "Good work labs",
-              horozintalAlign: "left"
+              horozintalAlign: "left",
+              color:"red"
             }
           },
           {
@@ -58,7 +59,8 @@ const hoc = () => Component => {
             type: "Header",
             props: {
               label: "Drop Message",
-              horozintalAlign: "left"
+              horozintalAlign: "center",
+              backgroundColor:"red"
             }
           },
           {
@@ -66,7 +68,7 @@ const hoc = () => Component => {
             props: {
               color: "grey",
               horizontalAlign: "center",
-              verticalAlign: "center"
+              textAlign: "center"
             },
             children: {
               items: [
@@ -118,7 +120,7 @@ const hoc = () => Component => {
           {
             type: "Card",
             props: {
-              color: "grey",
+              backgroundColor: "grey",
               horozintalAlign: "left"
             },
             children: {
@@ -212,10 +214,11 @@ const hoc = () => Component => {
     render() {
       const { flexConfigForHome, flexConfigForRegistration } = this.state;
       const { handleOnSubmit, handleFieldChange } = this;
+      console.log(this);
       return (
         <Component
-          config={flexConfigForHome}
-          config1={flexConfigForRegistration}
+          home={flexConfigForHome.items}
+          register={flexConfigForRegistration.items}
           handleOnSubmit={handleOnSubmit}
           handleFieldChange={handleFieldChange}
           {...this.props}
