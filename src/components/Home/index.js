@@ -6,15 +6,124 @@ import TextFields from "../commonComponents/TextFields";
 import ButtonComponent from "../commonComponents/ButtonComponent";
 import hoc from "../commonComponents/HocComponent";
 import Flexi from '../Flexi';
+const  flexConfigForHome= {
+   items: [
+     {
+       type: "Card",
+       props: {
+         label: "Good work labs",
+         horozintalAlign: "left",
+         color:"red"
+       }
+     },
+     {
+       type: "Header",
+       props: {
+         label: "Technology",
+         horozintalAlign: "left"
+       }
+     },
+     {
+       type: "Card",
+       props: {
+         color: "grey"
+       },
+       children: {
+         items: [
+           {
+             type: "Cards",
+             props: {
+               cards: [
+                 {
+                   label: "Java",
+                   horizontalAlign: "center",
+                   verticalAlign: "center",
+                   color: "orange"
+                 },
+                 {
+                   label: "React",
+                   horizontalAlign: "center",
+                   verticalAlign: "center",
+                   color: "blue"
+                 },
+                 {
+                   label: "Node",
+                   horizontalAlign: "center",
+                   verticalAlign: "center",
+                   color: "pink"
+                 }
+               ]
+             }
+           }
+         ]
+       }
+     },
+     {
+       type: "Header",
+       props: {
+         label: "Drop Message",
+         horozintalAlign: "center",
+         backgroundColor:"red"
+       }
+     },
+     {
+       type: "Card",
+       props: {
+         color: "grey",
+         horizontalAlign: "center",
+         textAlign: "center"
+       },
+       children: {
+         items: [
+           {
+             type: "TextField",
+             props: {
+               inputType: "text",
+               label: "Name",
+               name: "name"
+             }
+           },
+           {
+             type: "TextField",
+             props: {
+               inputType: "email",
+               label: "Email",
+               name: "email"
+             }
+           },
+           {
+             type: "TextField",
+             props: {
+               inputType: "number",
+               label: "Mobile",
+               name: "Message"
+             }
+           },
+           {
+             type: "Button",
+             props: {
+               label: "Submit"
+             }
+           }
+         ]
+       }
+     }
+   ]
+ }
+
 class Home extends React.Component {
   render() {
-    const { home, handleFieldChange, handleOnSubmit } = this.props;
+    const { config, handleFieldChange, handleOnSubmit } = this.props;
+    console.log(this.props,"home1");
 return(
-  <Flexi items={home} handleFieldChange={handleFieldChange} handleOnSubmit={handleOnSubmit}/>
+   <div>
+ <Flexi items={config.items} handleFieldChange={handleFieldChange} handleOnSubmit={handleOnSubmit}/>
+   </div>
+
 )
   }
 }
-export default hoc()(Home);
+export default hoc(flexConfigForHome)(Home);
 // if(item.type=="Card"){
 //   return(<CardComponent labelname={item.props.label} cardColor={item.props.color} children={item.children} />)
 // }

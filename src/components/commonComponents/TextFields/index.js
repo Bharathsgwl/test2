@@ -5,6 +5,7 @@ import { TextField } from "@material-ui/core";
 const TextFields = props => {
   const { data, list, handleFieldChange } = props;
   console.log(data.name);
+  console.log(props,"TextField");
   debugger;
   return (
     <div>

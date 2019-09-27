@@ -7,10 +7,17 @@ import RadioButtons from "../commonComponents/RadioButtons";
 import ButtonComponent from "../commonComponents/ButtonComponent";
 class Flexi extends React.Component {
   render() {
-    const { items, handleFieldChange, list, handleOnSubmit } = this.props;
-
+    const {
+      items,
+      flexConfigForRegistration,
+      handleFieldChange,
+      list,
+      handleOnSubmit
+    } = this.props;
+    console.log(items, "flexi");
     const renderField = items => {
       let childrens = "children" in items;
+      console.log(items, "renderField");
       switch (items.type) {
         case "Header":
           return <Header data={items.props} />;
@@ -18,8 +25,8 @@ class Flexi extends React.Component {
           if (childrens) {
             return (
               <CardComponent data={items.props}>
-                {items.children.items.map(child => {
-                  return <div>{renderField(child)}</div>;
+                {items.children.items.map((child,index) => {
+                  return <div key={index}>{renderField(child)}</div>;
                 })}
               </CardComponent>
             );
@@ -57,12 +64,13 @@ class Flexi extends React.Component {
       }
     };
 
-    const renderFields =items.map(item=>{
-        return renderField(item);
-      })
-  
-
-    return <div>{renderFields}</div>;
+    return (
+      <div>
+        {items.map(items => {
+          return renderField(items);
+        })}
+      </div>
+    );
   }
 }
 export default Flexi;

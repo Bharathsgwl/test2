@@ -6,7 +6,7 @@ class CardComponent extends Component {
 
     let color = data.color;
     let textAlign=data.textAlign;
-    console.log(this.props.data1,"cardwadwd");
+    console.log(data,"cardwadwd");
     debugger;
     const children = React.Children.map(this.props.children, child => {
       return <div>{child}</div>;

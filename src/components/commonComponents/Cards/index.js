@@ -7,11 +7,11 @@ class Cards extends Component {
     console.log(color, "color");
     debugger;
     return (
-      <div className="card" >
+      <div className="card">
         {data.cards.map((item, index) => (
-          <div style={{ color: item.color }}>
-        {item.label}
-          </div>
+          <Card style={{ color: item.color }} key={index}>
+            {item.label}
+          </Card>
         ))}
       </div>
     );

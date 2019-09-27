@@ -11,9 +11,9 @@ const RadioButtons = props => {
       </Typography>
 
       <div>
-        {options.map(option => {
+        {options.map((option,index) => {
           return (
-            <React.Fragment>
+            <React.Fragment key={index}>
               <input name={data.name} type="radio" value={option.label} onChange={props.handleFieldChange} />
               {option.label}
             </React.Fragment>
