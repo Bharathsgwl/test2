@@ -57,9 +57,10 @@ class Flexi extends React.Component {
       }
     };
 
-    const renderFields = items.map(item => {
-      return renderField(item);
-    });
+    const renderFields =items.map(item=>{
+        return renderField(item);
+      })
+  
 
     return <div>{renderFields}</div>;
   }
