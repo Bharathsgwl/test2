@@ -1,6 +1,6 @@
 import React from "react";
 import { Typography } from "@material-ui/core";
-const RadioButtons = props => {
+const RadioGroup = props => {
   const { data } = props;
 
   let { options } = data;
@@ -23,7 +23,7 @@ const RadioButtons = props => {
     </div>
   );
 };
-export default RadioButtons;
+export default RadioGroup;
 // {options.map(option=>{
 //     return  (
 //   <React.Fragment>

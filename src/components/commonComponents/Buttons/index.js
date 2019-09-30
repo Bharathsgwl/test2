@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "@material-ui/core";
 
-class ButtonComponent extends React.Component {
+class Buttons extends React.Component {
   render() {
     let { data,handleOnSubmit } = this.props;
 console.log(this.props.data,"button");
@@ -14,4 +14,4 @@ console.log(this.props.data,"button");
     );
   }
 }
-export default ButtonComponent;
+export default Buttons;

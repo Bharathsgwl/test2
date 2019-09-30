@@ -1,15 +1,10 @@
 import React from "react";
-import CardComponent from "../commonComponents/CardComponent";
-import Header from "../commonComponents/Header";
-import Cards from "../commonComponents/Cards";
-import TextFields from "../commonComponents/TextFields";
-import ButtonComponent from "../commonComponents/ButtonComponent";
 import hoc from "../commonComponents/HocComponent";
 import Flexi from '../Flexi';
 const  flexConfigForHome= {
    items: [
      {
-       type: "Card",
+       type: "CardC",
        props: {
          label: "Good work labs",
          horozintalAlign: "left",
@@ -24,7 +19,7 @@ const  flexConfigForHome= {
        }
      },
      {
-       type: "Card",
+       type: "CardC",
        props: {
          color: "grey"
        },
@@ -67,7 +62,7 @@ const  flexConfigForHome= {
        }
      },
      {
-       type: "Card",
+       type: "CardC",
        props: {
          color: "grey",
          horizontalAlign: "center",
@@ -76,7 +71,7 @@ const  flexConfigForHome= {
        children: {
          items: [
            {
-             type: "TextField",
+             type: "TexField",
              props: {
                inputType: "text",
                label: "Name",
@@ -84,7 +79,7 @@ const  flexConfigForHome= {
              }
            },
            {
-             type: "TextField",
+             type: "TexField",
              props: {
                inputType: "email",
                label: "Email",
@@ -92,7 +87,7 @@ const  flexConfigForHome= {
              }
            },
            {
-             type: "TextField",
+             type: "TexField",
              props: {
                inputType: "number",
                label: "Mobile",
@@ -100,7 +95,7 @@ const  flexConfigForHome= {
              }
            },
            {
-             type: "Button",
+             type: "Buttons",
              props: {
                label: "Submit"
              }
@@ -114,7 +109,6 @@ const  flexConfigForHome= {
 class Home extends React.Component {
   render() {
     const { config, handleFieldChange, handleOnSubmit } = this.props;
-    console.log(this.props,"home1");
 return(
    <div>
  <Flexi items={config.items} handleFieldChange={handleFieldChange} handleOnSubmit={handleOnSubmit}/>

@@ -12,7 +12,7 @@ const flexConfigForRegistration={
       }
     },
     {
-      type: "Card",
+      type: "CardC",
       props: {
         color: "grey",
         horozintalAlign: "left",
@@ -20,7 +20,7 @@ const flexConfigForRegistration={
       children: {
         items: [
           {
-            type: "TextField",
+            type: "TexField",
             props:{
               inputType:"text",
               label:"Name",
@@ -28,7 +28,7 @@ const flexConfigForRegistration={
             }
           },
           {
-            type: "TextField",
+            type: "TexField",
             props:{
               inputType:"email",
               label:"Email",
@@ -36,7 +36,7 @@ const flexConfigForRegistration={
             }
           },
           {
-            type: "TextField",
+            type: "TexField",
             props:{
               inputType:"number",
               label:"Mobile",
@@ -44,7 +44,7 @@ const flexConfigForRegistration={
             }
           },
           {
-            type: "RadioGruop",
+            type: "RadioGroup",
             props:{
               label:"Gender",
               name:"gender",
@@ -59,7 +59,7 @@ const flexConfigForRegistration={
             }
           },
           {
-            type: "TextField",
+            type: "TexField",
             props:{
               inputType:"password",
               label:"Password",
@@ -67,7 +67,7 @@ const flexConfigForRegistration={
             }
           },
           {
-            type: "TextField",
+            type: "TexField",
             props:{
               inputType:"password",
               label:"Confirm Password",
@@ -75,7 +75,7 @@ const flexConfigForRegistration={
             }
           },
           {
-            type: "Button",
+            type: "Buttons",
             props:{
               label:"Register"
             }
@@ -88,7 +88,7 @@ const flexConfigForRegistration={
 class Register extends React.Component {
   render(){
 let {config,handleFieldChange,handleOnSubmit}=this.props;
-console.log(config ,"items");
+
     return(
 <div>
 <Flexi items={config.items} handleFieldChange={handleFieldChange} handleOnSubmit={handleOnSubmit}/>

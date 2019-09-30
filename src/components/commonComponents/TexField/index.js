@@ -1,14 +1,14 @@
 import React from "react";
-import RadioButtons from "../RadioButtons";
-import ButtonComponent from "../ButtonComponent";
 import { TextField } from "@material-ui/core";
-const TextFields = props => {
+const TexField = props => {
   const { data, list, handleFieldChange } = props;
   console.log(data.name);
   console.log(props,"TextField");
   debugger;
   return (
     <div>
+    <label>{data.label}:</label>
+    <br/>
       <TextField
         id="outlined-email-input"
         label={data.label}
@@ -21,7 +21,7 @@ const TextFields = props => {
     </div>
   );
 };
-export default TextFields;
+export default TexField;
 // <TextField
 //     id="outlined-email-input"
 //     label={data.label}

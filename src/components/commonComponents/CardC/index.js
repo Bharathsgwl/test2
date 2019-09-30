@@ -1,12 +1,11 @@
 import React, { Component } from "react";
 import { Card } from "@material-ui/core";
-class CardComponent extends Component {
+class CardC extends Component {
   render() {
     var { data } = this.props;
-
     let color = data.color;
-    let textAlign=data.textAlign;
-    console.log(data,"cardwadwd");
+    let textAlign = data.textAlign;
+
     debugger;
     const children = React.Children.map(this.props.children, child => {
       return <div>{child}</div>;
@@ -14,10 +13,10 @@ class CardComponent extends Component {
 
     debugger;
     return (
-      <div >
-        <div  style={{ color: "black" ,textAlign:textAlign}}>
-          <Card  style={{width:"80%" , margin:"auto",color:color}} >
-            <label style={{textAlign:textAlign}}>{data.label}</label>
+      <div>
+        <div style={{ color: "black", textAlign: textAlign }}>
+          <Card style={{ width: "80%", margin: "auto", color: color}}>
+            <label style={{ textAlign: textAlign }}>{data.label}</label>
             {children}
           </Card>
         </div>
@@ -26,7 +25,7 @@ class CardComponent extends Component {
   }
 }
 
-export default CardComponent;
+export default CardC;
 
 // {items.map(itemname=>{
 //   if(itemname.type=="TextField"){
